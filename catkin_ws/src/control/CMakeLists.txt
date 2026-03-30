@@ -1,0 +1,19 @@
+cmake_minimum_required(VERSION 3.0.2)
+project(control)
+
+find_package(catkin REQUIRED COMPONENTS roscpp rospy std_msgs geometry_msgs nav_msgs move_base_msgs)
+
+add_message_files(FILES RobotState.msg Mission.msg ControlCmd.msg)
+
+generate_messages(DEPENDENCIES std_msgs geometry_msgs nav_msgs)
+
+catkin_package(CATKIN_DEPENDS roscpp rospy std_msgs geometry_msgs nav_msgs move_base_msgs)
+
+install(DIRECTORY launch/
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch)
+
+install(DIRECTORY config/
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/config)
+
+install(DIRECTORY scripts/
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/scripts)
