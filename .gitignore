@@ -1,0 +1,19 @@
+# Workspace config (private)
+SOUL.md
+USER.md
+IDENTITY.md
+TOOLS.md
+AGENTS.md
+HEARTBEAT.md
+MEMORY.md
+memory/
+*.deb
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
